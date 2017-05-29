@@ -23,9 +23,5 @@ namespace MasterDetailStudy
         {
             Navigation.PopAsync();
         }
-        private void OpenDrawer_OnClicked(object sender, EventArgs e)
-        {
-            _masterDetailPage.IsPresented = true;
-        }
     }
 }

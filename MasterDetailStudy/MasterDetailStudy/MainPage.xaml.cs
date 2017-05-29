@@ -22,14 +22,19 @@ namespace MasterDetailStudy
         private void NavigatePageA_OnClicked(object sender, EventArgs e)
         {
             IsPresented = false;
-            NavigationPage.Navigation.PopToRootAsync();
+            if (!(NavigationPage.CurrentPage is ContentPageA))
+            {
+                NavigationPage.Navigation.PushAsync(new ContentPageA(this));
+            }
         }
 
         private void NavigatePageB_OnClicked(object sender, EventArgs e)
         {
             IsPresented = false;
-            NavigationPage.Navigation.PopToRootAsync();
-            NavigationPage.Navigation.PushAsync(new ContentPageB1(this));
+            if (!(NavigationPage.CurrentPage is ContentPageB1))
+            {
+                NavigationPage.Navigation.PushAsync(new ContentPageB1(this));
+            }
         }
     }
 

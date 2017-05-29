@@ -24,7 +24,7 @@ namespace MasterDetailStudy
             Navigation.PushAsync(new ContentPageB2(_masterDetailPage));
         }
 
-        private void OpenDrawer_OnClicked(object sender, EventArgs e)
+        private void OnClickedOpenDrawer(object sender, EventArgs e)
         {
             _masterDetailPage.IsPresented = true;
         }

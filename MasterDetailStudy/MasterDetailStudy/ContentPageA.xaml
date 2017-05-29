@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MasterDetailStudy;assembly=MasterDetailStudy"
              x:Class="MasterDetailStudy.ContentPageA"
+             NavigationPage.HasNavigationBar="False"
              Title="ContentPageA">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Button Text="Open Drawer" Clicked="OpenDrawer_OnClicked"/>
-        <Label Text="ContentPageA"/>
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:NavigationView Text="Menu" Clicked="OnClickedOpenDrawer"/>
+        <Label Grid.Row="1" Text="ContentPageA" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </Grid>
 </ContentPage>

@@ -19,7 +19,7 @@ namespace MasterDetailStudy
             InitializeComponent();
         }
 
-        private void OpenDrawer_OnClicked(object sender, EventArgs e)
+        private void OnClickedOpenDrawer(object sender, EventArgs e)
         {
             _masterDetailPage.IsPresented = true;
         }

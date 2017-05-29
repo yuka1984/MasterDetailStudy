@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MasterDetailStudy.NavigationView"
+             BackgroundColor="DodgerBlue"
+             x:Name="MyInstance">
+    <ContentView.Content>
+        <Button Text="{Binding Source={x:Reference MyInstance}, Path=Text}" Clicked="Button_OnClicked" HorizontalOptions="Start"/>
+    </ContentView.Content>
+</ContentView>
